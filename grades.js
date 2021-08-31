@@ -17,5 +17,23 @@ console.log(highest- lowest);
 gradedef(grades);
 
 function median(grade) {
-    let med =[]
+    let size = Math.floor(grade.length/2);
+    let newarr = [...grade].sort((a, b) => a - b);
+    return newarr[size];
+
 }
+console.log(median(grades));
+
+function defhalf(grades) {
+    let lowest =grades[grades.length/2];
+let highest =grades[grades.length/2];
+for (let i =grades.length/2; i< grades.length ;i++) {
+    if (grades[i]>highest)
+    highest=grades[i];
+    if (grades[i]<lowest)
+    lowest=grades[i];
+}
+console.log(highest - lowest);
+
+}
+defhalf(grades);
