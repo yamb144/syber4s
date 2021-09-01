@@ -18,7 +18,7 @@ gradedef(grades);
 
 function median(grade) {
     let size = Math.floor(grade.length/2);
-    let newarr = [...grade].sort((a, b) => a - b);
+    let newarr = grade.slice().sort((a, b) => a - b);
     return newarr[size];
 
 }
